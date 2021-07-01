@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Zoom On Hover Images</title>
+    </head>
+    <style>
+        /* Container Center */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Parent Container for Flex Items */
+        .parent {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .img-wrapper {
+            display: inline-block;
+            height: 320px;
+            width: 320px;
+            margin: 10px;
+            overflow: hidden;
+            box-shadow: 1px 1px 4px 0px gray;
+        }
+
+        .img-wrapper:hover > img {
+            transform: scale(1.1);
+            transition: all 2s linear;
+        }
+
+        img {
+            height: inherit;
+            width: inherit;
+            object-fit: cover;
+            transition: all 1s linear;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="parent">
+                <div class="img-wrapper">
+                    <img src="./images/pexels-photo-273848.jpeg" alt="img">
+                </div>
+                <div class="img-wrapper">
+                    <img src="./images/pexels-photo-8385551.jpeg" alt="img">
+                </div>
+                <div class="img-wrapper">
+                    <img src="./images/pexels-skylar-kang-6045403.jpg" alt="img">
+                </div>
+                <div class="img-wrapper">
+                    <img src="./images/pexels-laker-6157034.jpg" alt="img">
+                </div>
+                <div class="img-wrapper">
+                    <img src="./images/pexels-laker-6157041.jpg" alt="img">
+                </div>
+                <div class="img-wrapper">
+                    <img src="./images/pexels-photo-5945854.jpeg" alt="img">
+                </div>
+            </div><!-- parent closing -->
+        </div><!-- container closing -->
+    </body>
+</html>
